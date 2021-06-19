@@ -1,6 +1,7 @@
 const app = {     
 
     board : document.getElementById('board'),
+    restart : document.getElementsByTagName('button'),
     gameOver: false,
     count: 0,
     row: 4,
@@ -20,14 +21,19 @@ const app = {
 
     isGameOver: function () {
         if (app.player.x === app.targetCell.x && app.player.y === app.targetCell.y) {
+            // restart Game
+            app.restart[0].style.display = 'block'
+
+
             app.gameOver = true;
             let message = document.createElement('div');
             message.textContent = `Congratulation you win in ${app.count+1} shifts`;
             message.className = 'message';
             app.board.appendChild(message);
-            // restart Game
-            let buttonRestart = document.getElementsByTagName('button')
-            buttonRestart[0].addEventListener('click', ()=> {
+            
+            
+            app.restart[0].addEventListener('click', ()=> {
+                app.restart[0].style.display = 'none';
                 app.gameOver = false;
                 app.player.x = 0;
                 app.player.y = 0;
@@ -184,6 +190,7 @@ const app = {
 
     init: function () {
         console.log('init !');
+        app.restart[0].style.display = 'none';
         app.drawBoard();
         document.addEventListener('keyup', app.listenKeyboardEvents);
     }    
