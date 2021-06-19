@@ -1,0 +1,61 @@
+body {
+    background: #ddd;
+}
+  
+  #board {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    margin: auto;
+  }
+  .cell {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .player {
+    width: 28px;
+    height: 33px;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent;
+    margin: 20px;
+    background: url(../img/sprite.png);
+    background-position-y: 192px;
+    overflow: hidden;
+  }
+  
+  .targetCell {
+    background-color: green;
+  }
+  
+  .player--up {
+    /* transform: rotate(-90deg); */
+    background-position-y: 160px;
+  }
+  
+  .player--left {
+    /* transform: rotate(-180deg); */
+    background-position-y: 224px;
+  }
+  
+  .player--down {
+    /* transform: rotate(-270deg); */
+    background-position-y: 128px;
+  }
+  
+  .player--right {
+    /* transform: rotate(-360deg); */
+    background-position-y: 192px;
+  }
+  
+  .message {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+  }
