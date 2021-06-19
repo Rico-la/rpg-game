@@ -6,6 +6,6 @@ To play
 
 `git clone <this_url_repository>`
 
-Open the ìndex.html` file in your favorite web browser
+Open the `index.html` file in your favorite web browser
 
 Enjoy it !
